@@ -23,7 +23,7 @@ namespace RandomAlgorithmChecker
         }
 
         // Define other methods and classes here
-        IEnumerable<TestCaseData> TestCases()
+        static IEnumerable<TestCaseData> TestCases()
         {
             yield return new TestCaseData("59124a05a526e61d2270b3d68d5d22afb6a1e8b8");
             yield return new TestCaseData("e03d0bcb0c49036c2d51aa107f891fa68b81a085");

@@ -16,7 +16,7 @@ namespace RandomAlgorithmChecker
             var reviewerPool = allTeamMembers;
             if (!string.IsNullOrEmpty(author))
                 reviewerPool = allTeamMembers.Except(new List<string> {author}).ToArray();
-            var sum = BigInteger.Parse(commitHash, NumberStyles.HexNumber);
+            var sum = BigInteger.Parse("0" + commitHash, NumberStyles.HexNumber);
             var selectedIdx = (int)(sum % reviewerPool.Length);
             return reviewerPool.ElementAt(selectedIdx);
         }
