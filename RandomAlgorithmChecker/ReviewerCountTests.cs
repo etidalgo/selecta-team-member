@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace RandomAlgorithmChecker
@@ -24,6 +25,9 @@ namespace RandomAlgorithmChecker
                 reviewerCount[designatedReviewer]++;
             }
             reviewerCount.PrintCounts();
+            var counts = reviewerCount.Select(rc => rc.Value).Distinct().ToArray();
+            var range = counts.Max() - counts.Min();
+            range.Should().BeLessThan(20);
         }
 
         static IEnumerable<string> TestCases()
