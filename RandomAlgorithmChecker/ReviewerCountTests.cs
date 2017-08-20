@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
@@ -28,6 +29,11 @@ namespace RandomAlgorithmChecker
             var counts = reviewerCount.Select(rc => rc.Value).Distinct().ToArray();
             var range = counts.Max() - counts.Min();
             range.Should().BeLessThan(20);
+        }
+
+        static IEnumerable<string> LotsOfCommitHashesEnumerable()
+        {
+            yield return "9cc290951c4b2413dc89ffffde0ff80eecb3c2f1";
         }
 
         static IEnumerable<string> TestCases()
@@ -75,5 +81,24 @@ namespace RandomAlgorithmChecker
             yield return "baf3b3c09c2a685fb4d42be9c4af2f3b63afd8b2";
             yield return "c7d5beec023d972a537adec1ffea5e25cca0d124";
         }
+
+        // https://stackoverflow.com/questions/17292366/hashing-with-sha1-algorithm-in-c-sharp
+        static string Hash(string input)
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(input));
+                var sb = new StringBuilder(hash.Length * 2);
+
+                foreach (byte b in hash)
+                {
+                    // can be "x2" if you want lowercase
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
+
     }
 }
