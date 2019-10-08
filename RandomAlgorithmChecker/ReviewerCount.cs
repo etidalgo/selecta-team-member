@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandomAlgorithmChecker
 {
-    class ReviewerCount : Scorecard.Scorecard<string>
+    public class ReviewerCount : Scorecard.Scorecard<string>
     {
     }
 }

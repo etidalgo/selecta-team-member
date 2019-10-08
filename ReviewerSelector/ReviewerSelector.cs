@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RandomAlgorithmChecker
 {
-    class ReviewerSelector
+    public class ReviewerSelector
     {
         public static string SelectReviewer(string commitHash, string author, IEnumerable<string> teamMembers)
         {

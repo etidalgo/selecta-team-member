@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandomAlgorithmChecker.Scorecard
 {
-    class Scorecard<T> : Dictionary<T, int>
+    public class Scorecard<T> : Dictionary<T, int>
     {
         public virtual string PrintKey(T key)
         {
