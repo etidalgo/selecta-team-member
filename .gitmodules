@@ -1,0 +1,3 @@
+[submodule "reviewer-selector"]
+	path = reviewer-selector
+	url = https://github.com/etidalgo/reviewer-selector.git
