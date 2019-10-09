@@ -58,11 +58,5 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReviewerSelector\ReviewerSelector.csproj">
-      <Project>{1cea593b-d31c-4e20-83b1-6487fcfa547a}</Project>
-      <Name>ReviewerSelector</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
