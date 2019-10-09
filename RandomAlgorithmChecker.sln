@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomAlgorithmChecker", "RandomAlgorithmChecker\RandomAlgorithmChecker.csproj", "{F4DB04AE-8BFA-47E4-B692-3A9C814BBF83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewerSelector", "reviewer-selector\ReviewerSelector.csproj", "{1CEA593B-D31C-4E20-83B1-6487FCFA547A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F4DB04AE-8BFA-47E4-B692-3A9C814BBF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4DB04AE-8BFA-47E4-B692-3A9C814BBF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4DB04AE-8BFA-47E4-B692-3A9C814BBF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CEA593B-D31C-4E20-83B1-6487FCFA547A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CEA593B-D31C-4E20-83B1-6487FCFA547A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CEA593B-D31C-4E20-83B1-6487FCFA547A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CEA593B-D31C-4E20-83B1-6487FCFA547A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
